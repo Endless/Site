@@ -9,8 +9,8 @@ class Settings
         $this->host = 'localhost';
         $this->port = 3306;
 
-        $username = '';
-        $password = '';
+        $username = 'e';
+        $password = 'e';
 
         if($username === "" || $password === "")
         {
