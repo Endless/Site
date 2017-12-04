@@ -14,5 +14,10 @@ class Page
     {
         echo $this->settings->title;
     }
+
+    function printFooter()
+    {
+        echo "Copyright Artuto - 2017";
+    }
 }
 ?>
