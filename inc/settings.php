@@ -14,7 +14,7 @@ class Settings
 
         if($username === "" || $password === "")
         {
-            $this->redirect();
+            $this->redirect("./error/no_config.php");
         }
     }
 
