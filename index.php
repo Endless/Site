@@ -2,10 +2,10 @@
 require_once './inc/page.php';
 
 $page = new Page();
-$page->printTitle();
+
+$page->printHeader();
 ?>
 
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
