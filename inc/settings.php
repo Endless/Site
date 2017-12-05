@@ -12,7 +12,13 @@ class Settings
         $username = 'e';
         $password = 'e';
 
-        if($username === "" || $password === "")
+        $this->authToken = '';
+
+        $clientId = 0;
+        $clientSecret = '';
+        $redirectUri = 'https://endless.artuto.me';
+
+        if($username === "" || $password === "" || $this->authToken === "")
         {
             $this->redirect("./error/no_config.php");
         }
