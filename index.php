@@ -26,7 +26,9 @@ $page = new Page();
     <div class="colapse navbar-colapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="https://discord.gg/CXKfYW3">Support</a>
+                <a class="nav-link" href="invite.php">Invite</a>
             </li>
         </ul>
     </div>
