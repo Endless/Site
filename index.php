@@ -19,11 +19,11 @@ $page = new Page();
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <a class="navbar-brand" href="#">Endless</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle" style="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle" style="">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="colapse navbar-colapse" id="navbarColor03">
+    <div class="colapse navbar-colapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
