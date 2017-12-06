@@ -17,7 +17,8 @@ $header = new Header();
     <script src="https://maxcdn.bootstrap.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php $header->printNavbar(); ?>
+<?php $header->printNavbar();
+echo "die"; ?>
 <div class="container">
     <div class="jumbotron">
         <h2>Home</h2>
