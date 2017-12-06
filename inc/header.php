@@ -10,13 +10,6 @@ class Header
         $settings = $page->getSettings();
         $this->settings = $settings;
     }
-
-    function printNavbar()
-    {
-        ?>
-
-        <?php
-    }
 }
 ?>
 
