@@ -1,9 +1,11 @@
 <?php
 require_once './inc/page.php';
+require_once './inc/header.php';
 
 $page = new Page();
+$header = new Header();
 
-$page->printHeader();
+$header->printNavbar();
 ?>
 
 <html>
