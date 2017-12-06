@@ -6,11 +6,11 @@ class Page
     {
         ini_set('default_charset', 'utf-8');
         require_once 'settings.php';
-        require_once 'header.php';
+        //require_once 'header.php';
         $settings = new Settings();
-        $header = new Header();
+        //$header = new Header();
         $this->settings = $settings;
-        $this->header = $header;
+        //$this->header = $header;
     }
 
     function printTitle()
@@ -28,9 +28,9 @@ class Page
         return $this->settings;
     }
 
-    function printHeader()
+    /*function printHeader()
     {
         echo $this->header->printNavbar();
-    }
+    }*/
 }
 ?>

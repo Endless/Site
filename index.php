@@ -1,9 +1,9 @@
 <?php
 require_once './inc/page.php';
-require_once './inc/header.php';
+//require_once './inc/header.php';
 
 $page = new Page();
-$header = new Header();
+//$header = new Header();
 ?>
 
 <html>
@@ -17,7 +17,7 @@ $header = new Header();
     <script src="https://maxcdn.bootstrap.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php $header->printNavbar();
+<?php //$header->printNavbar();
 echo "die"; ?>
 <div class="container">
     <div class="jumbotron">
