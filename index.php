@@ -39,6 +39,12 @@ $page = new Page();
     </div>
 </nav>
 
+<div class="alert alert-dismissable alert-warning">
+    <button type="button" class="close" data-dimiss="alert">&times;</button>
+    <h4 class="alert-heading">Warning!</h4>
+    <p class="mb-0">Hi! This website is WIP, if you found any problem with it please open an issue on <a href="https://github.com/ArtutoGamer/Site">GitHub</a></p>
+</div>
+
 <div class="jumbotron">
     <h2>Home</h2>
 
@@ -48,6 +54,9 @@ $page = new Page();
     <br>
     <a href="../" class="btn btn-primary">Click me! :D</a>
 </div>
+
+
+
 </body>
 </html>
 
