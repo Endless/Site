@@ -27,7 +27,11 @@ $page = new Page();
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="https://discord.gg/CXKfYW3">Support</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="invite.php">Invite</a>
             </li>
         </ul>
