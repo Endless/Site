@@ -19,7 +19,7 @@ $page = new Page();
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <a class="navbar-brand" href="#">Endless</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle" style="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle" style="">
         <span class="navbar-toggler-icon"></span>
     </button>
 
