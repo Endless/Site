@@ -11,13 +11,13 @@ $page = new Page();
     <meta name="description" content="Endless website">
     <meta name="author" content="Artuto">
     <title>Endless - Home</title>
-    <link href="https://bootswatch.com/4/flatly/bootstrap.min.css" rel="stylesheet">
+    <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrap.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <a class="navbar-brand" href="#">Endless</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle" style="">
         <span class="navbar-toggler-icon"></span>
