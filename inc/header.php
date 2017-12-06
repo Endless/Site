@@ -1,14 +1,13 @@
 <?php
 
-require_once 'page.php';
-
-$page = new Page();
-
 class Header
 {
     public function __construct()
     {
-        $settings = $this->page->getSettings();
+        require_once 'page.php';
+
+        $page = new Page();
+        $settings = $page->getSettings();
         $this->settings = $settings;
     }
 
