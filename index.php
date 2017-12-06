@@ -11,7 +11,7 @@ $page = new Page();
     <meta name="description" content="Endless website">
     <meta name="author" content="Artuto">
     <title>Endless - Home</title>
-    <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet">
+    <link href="https://bootswatch.com/4/flatly/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrap.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
