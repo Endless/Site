@@ -5,7 +5,7 @@ require_once './inc/header.php';
 $page = new Page();
 $header = new Header();
 
-//$header->printNavbar();
+$header->printNavbar();
 ?>
 
 <html>
