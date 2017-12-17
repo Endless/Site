@@ -1,0 +1,26 @@
+{
+  "name": "Site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtutoGamer/Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtutoGamer/Site/issues"
+  },
+  "homepage": "https://github.com/ArtutoGamer/Site#readme",
+  "dependencies": {
+    "btoa": "^1.1.2",
+    "express": "^4.16.2",
+    "https": "^1.0.0",
+    "node-fetch": "^1.7.3"
+  }
+}
