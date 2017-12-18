@@ -2,5 +2,6 @@
   "id": "",
   "secret": "",
   "redirect": "",
-  "owner": ""
+  "owner": "",
+  "port": 80
 }
