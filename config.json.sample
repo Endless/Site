@@ -1,7 +1,8 @@
 {
-  "id": "",
+  "id": 0,
   "secret": "",
   "redirect": "",
-  "owner": "",
-  "port": 80
+  "owner": 0,
+  "portHttp": 0,
+  "portHttps": 0
 }
