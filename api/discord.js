@@ -26,13 +26,13 @@ router.get('/callback', catchAsync(async (req, res) => {
                 },
         });
     const json = await response.json();
-    res.cookie('token', `${json.access_token}`).sendDate('Redirecting...');
+    res.cookie('token', `${json.access_token}`).send('Redirecting...');
     res.redirect('/success');
 }));
 
 router.get('/success', catchAsync(async (req, res) => {
 
-    console.info(`Request: Cookies: ${req.cookies}`)
+    console.info(`Request: Cookies: ${req.cookies}`);
     if(!req.cookies) throw new Error('NoCookies');
 
     /*const token = req.cookies.token;
