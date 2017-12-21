@@ -26,8 +26,7 @@ router.get('/callback', catchAsync(async (req, res) => {
                 },
         });
     const json = await response.json();
-    res.cookie('token', `${json.access_token}`).send('Redirecting...');
-    res.redirect('/success');
+    res.cookie('token', `${json.access_token}`).redirect('/success');
 }));
 
 router.get('/success', catchAsync(async (req, res) => {
