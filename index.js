@@ -44,3 +44,5 @@ app.listen(config.portHttp, () => {
 }, app).listen(config.portHttps, () => {
     console.log(`[Express HTTPS] Running on port ${config.portHttps}`)
 });*/
+
+module.exports = app;

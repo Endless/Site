@@ -1,6 +1,6 @@
-const express = require('express');
 const fetch = require('node-fetch');
 const btoa = require('btoa');
+const express = require('../index');
 const config = require('../config.json');
 const router = express.Router();
 const { catchAsync } = require('../utils');
