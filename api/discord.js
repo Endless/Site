@@ -26,7 +26,7 @@ router.get('/callback', catchAsync(async (req, res) => {
                 },
         });
     const json = await response.json();
-    res.cookie('token', `${json.access_token}`).redirect('/success');
+    res.cookie('token', `${json.access_token}`).redirect('https://endless.artuto.me/api/discord/success');
 }));
 
 router.get('/success', catchAsync(async (req, res) => {
