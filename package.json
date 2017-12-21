@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ArtutoGamer/Site#readme",
   "dependencies": {
     "btoa": "^1.1.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "https": "^1.0.0",
     "node-fetch": "^1.7.3"
