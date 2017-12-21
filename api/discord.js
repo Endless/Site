@@ -26,14 +26,14 @@ router.get('/callback', catchAsync(async (req, res) => {
                 },
         });
     const json = await response.json();
-    res.cookie('token', `${json.access_token}`);
-    res.redirect('https://endless.artuto.me/api/discord/login/success');
+    res.cookie('token', `${json.access_token}`).sendDate('Redirecting...');
+    res.redirect('/success');
 }));
 
-router.get('/login/success', catchAsync(async (req, res) => {
+router.get('/success', catchAsync(async (req, res) => {
 
     console.info(`Request: Cookies: ${req.cookies}`)
-    //if(!req.cookies) throw new Error('NoCookies');
+    if(!req.cookies) throw new Error('NoCookies');
 
     /*const token = req.cookies.token;
     const response = await fetch('https://discordapp.com/api/users/@me',
