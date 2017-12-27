@@ -8,16 +8,23 @@ const app = express();
 if(config.portHttp==="" || config.portHttps==="")
     throw new Error('Ports not defined!');
 
-app.use(cookieParser());
+// Routes
 
-app.get('/', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'index.html'));
-});
+const login = require('./auth/login');
+const callback = require('./auth/callback');
+const success = require('./auth/success');
+const logout = require('./auth/logout');
 
-app.use('/auth/login', require('./auth/login'));
-app.use('/auth/callback', require('./auth/callback'));
-app.use('/auth/success', require('./auth/success'));
-app.use('/auth/logout', require('./auth/logout'));
+app
+    .use(cookieParser())
+    .set('view-engine', 'ejs')
+    .use('/auth/login', login)
+    .use('/auth/callback', callback)
+    .use('/auth/success', success)
+    .use('/auth/logout', logout)
+    .get('/', (req, res) => {
+        res.status(200).sendFile(path.join(__dirname, 'index.html'));
+    });
 
 app.use((err, req, res, next) => {
     if(config.debug) console.log(err);
@@ -38,8 +45,7 @@ app.use((err, req, res, next) => {
                 status: 'ERROR',
                 error: err.message,
             });
-    }
-});
+    }});
 
 app.listen(config.portHttp, () => {
 	console.info(`[Express HTTP] Running on port ${config.portHttp}`);
