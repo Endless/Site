@@ -20,7 +20,7 @@ app.use('/auth/success', require('./auth/success'));
 app.use('/auth/logout', require('./auth/logout'));
 
 app.use((err, req, res, next) => {
-    console.log(err);
+    if(config.debug) console.log(err);
     switch(err.message)
     {
         case 'NoCodeProvided':
