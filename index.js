@@ -15,6 +15,8 @@ const callback = require('./auth/callback');
 const success = require('./auth/success');
 const logout = require('./auth/logout');
 
+// Set app
+
 app
     .use(cookieParser())
     .set('view-engine', 'ejs')
@@ -47,6 +49,8 @@ app.use((err, req, res, next) => {
             });
     }});
 
+// Actually startup
+
 app.listen(config.portHttp, () => {
 	console.info(`[Express HTTP] Running on port ${config.portHttp}`);
 });
@@ -57,6 +61,8 @@ app.listen(config.portHttp, () => {
 }, app).listen(config.portHttps, () => {
     console.log(`[Express HTTPS] Running on port ${config.portHttps}`)
 });*/
+
+// Log info when done
 
 console.log(`[Endless Dashboard] App ID: ${config.id}`);
 console.log(`[Endless Dashboard] Owner: ${config.owner}`);
