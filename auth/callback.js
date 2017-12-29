@@ -8,12 +8,12 @@ const CLIENT_ID = config.id;
 const CLIENT_SECRET = config.secret;
 const REDIR = encodeURIComponent(config.redirect);
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     if(!(req.query.code)) throw new Error('NoCodeProvided');
 
     const code = req.query.code;
     const creds = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
-    const response = fetch(`https://discordapp.com/api/oauth2/token?grant_type=authorization_code&code=${code}&redirect_uri=${REDIR}`,
+    const response = await fetch(`https://discordapp.com/api/oauth2/token?grant_type=authorization_code&code=${code}&redirect_uri=${REDIR}`,
         {
             method: 'POST',
             headers: {
