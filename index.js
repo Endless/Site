@@ -1,7 +1,9 @@
 const express = require('express'), cookieParser = require('cookie-parser');
 const https = require('https');
-const path = require('path');
+const bodyParser = require('body-parser');
+const session = require('express-session');
 const config = require('./config.json');
+const authentication = require('./auth/auth');
 const { readFileSync } = require('fs');
 const app = express();
 
@@ -10,23 +12,36 @@ if(config.portHttp==="" || config.portHttps==="")
 
 // Routes
 
-const login = require('./auth/login');
-const callback = require('./auth/callback');
-const success = require('./auth/success');
-const logout = require('./auth/logout');
+const auth = require('./auth');
 
-// Set app
+// Set-up app
 
 app
-    .use(cookieParser())
-    .set('view-engine', 'ejs')
-    .use('/auth/login', login)
-    .use('/auth/callback', callback)
-    .use('/auth/success', success)
-    .use('/auth/logout', logout)
+    .enable('trust proxy')
+    .use(bodyParser.urlencoded({
+        extended: false,
+    }))
+    .use(session({
+        secret: config.secret,
+        resave: true,
+        saveUninitialized: true,
+        proxy: true,
+    }))
+    .use(cookieParser(config.secret))
+    .use(authentication.initialize())
+    .use(authentication.session());
+
+app
+    .set('view engine', 'ejs')
+    .set('views', `${__dirname}/public`);
+
+app
     .get('/', (req, res) => {
-        res.status(200).sendFile(path.join(__dirname, 'index.html'));
-    });
+        res.status(200).render('index', {
+            identity: (req.isAuthenticated()?`${req.user.username}#${req.user.discriminator}`:'NO'),
+        });
+    })
+    .use('/auth', auth);
 
 app.use((err, req, res, next) => {
     if(config.debug) console.log(err);
@@ -48,6 +63,7 @@ app.use((err, req, res, next) => {
                 error: err.message,
             });
     }});
+
 
 // Actually startup
 

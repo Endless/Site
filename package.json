@@ -18,10 +18,15 @@
   },
   "homepage": "https://github.com/ArtutoGamer/Site#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "btoa": "^1.1.2",
     "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "https": "^1.0.0",
-    "node-fetch": "^1.7.3"
+    "node-fetch": "^1.7.3",
+    "passport": "^0.4.0",
+    "passport-discord": "^0.1.3"
   }
 }
