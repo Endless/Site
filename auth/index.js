@@ -15,7 +15,7 @@ router
         user.guilds = JSON.parse(guilds.body);
 
         req.login(user, e => (e?res.render('error', { code: '500', identity: 'NO'}):undefined));
-        req.session.save(user, e => (e?res.render('error', { code: '500', identity: 'NO'}):undefined));
+        req.session.save(e => (e?res.render('error', { code: '500', identity: 'NO'}):undefined));
 
         res.redirect(req.query.redirectURI?req.query.redirectURI:'/');
     }, authSystem.authenticate('discord'))

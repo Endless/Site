@@ -30,14 +30,11 @@
                 <% } %>
             </ul>
             <span class="navbar-text">
-                <% if(identity==='NO')
-                {%>
-                Logged in as <strong><% identity %></strong>.
-                <% }
-                else
-                { %>
+                <% if(!(identity=='NO')) { %>
+                Logged in as <strong><%= identity %></strong>.
+                <% } else { %>
                 Not logged in.
-                <% }%>
+                <% } %>
             </span>
         </div>
     </nav>
