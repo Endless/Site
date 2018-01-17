@@ -1,0 +1,10 @@
+{
+  "id": "0",
+  "secret": "",
+  "redirect": "",
+  "owner": "0",
+  "portHttp": 0,
+  "portHttps": 0,
+  "debug": false,
+  "scopes": []
+}
